@@ -63,7 +63,7 @@ def test_split_integer_is_sorted_ascending(
 
 
 @pytest.mark.parametrize("value, number_of_parts", [
-    (11, 3), (10, 10), (9, 3),
+    (12, 3), (10, 10), (9, 3),
 ])
 def test_split_integer_equal_parts_when_divisible(
         value: int,
