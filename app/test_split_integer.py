@@ -43,8 +43,11 @@ def test_split_integer_sum_equals_value(
 def test_split_integer_max_min_difference_le_1(
         value: int,
         number_of_parts: int) -> None:
-    result = split_integer(value, number_of_parts)
-    assert max(result) - min(result) <= 1
+    assert (
+        max(split_integer(value, number_of_parts))
+        - min(split_integer(value, number_of_parts))
+        <= 1
+    )
 
 
 @pytest.mark.parametrize("value, number_of_parts", [
@@ -53,8 +56,10 @@ def test_split_integer_max_min_difference_le_1(
 def test_split_integer_is_sorted_ascending(
         value: int,
         number_of_parts: int) -> None:
-    result = split_integer(value, number_of_parts)
-    assert result == sorted(result)
+    assert (
+        split_integer(value, number_of_parts)
+        == sorted(split_integer(value, number_of_parts))
+    )
 
 
 @pytest.mark.parametrize("value, number_of_parts", [
