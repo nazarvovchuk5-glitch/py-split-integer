@@ -55,7 +55,9 @@ def test_parts_should_be_sorted_when_they_are_not_equal(
 
 
 @pytest.mark.parametrize("value, number_of_parts, expected", [
-    (4, 6, [0, 0, 1, 1, 1, 1]), (2, 3, [0, 1, 1]),
+    (4, 6, [0, 0, 1, 1, 1, 1]),
+    (2, 3, [0, 1, 1]),
+    (3, 5, [0, 0, 1, 1, 1]),
 ])
 def test_should_add_zeros_when_value_is_less_than_number_of_parts(
         value: int,
